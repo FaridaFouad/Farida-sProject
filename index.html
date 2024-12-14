@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bookshelf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Your Books</div>
+        <nav id="main-nav">
+            <a href="openBecomeAuthor">Become an Author</a>
+            <a href="openLibraryPass">Library Pass</a>
+            <a href="openHelpSection">Help?</a>
+        </nav>
+        <div class="mobile-menu-icon" id="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Books for You</h1>
+            <p>Discover your next favorite book. Your literary adventure starts here</p>
+            <button id="discover-button">Discover</button>
+            <div id="discover-accordion" class="discover-accordion">
+                <div class="accordion-content">
+                    <h3>Welcome to Your Bookshelf</h3>
+                    <p>Your Bookshelf is your ultimate destination for book lovers</p>
+                    <ul>
+                        <li>Curated book collections</li>
+                        <li>Diverse genre selections</li>
+                        <li>Exclusive Loyalty Programs</li>
+                    </ul>
+                    <p>Explore, read, and fall in love with books all over again!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="authors">
+        <h2>Authors</h2>
+        <div class="author">
+            <a href="https://www.goodreads.com/author/on_goodreads">Top Authors</a>
+            <a href="https://www.goodreads.com/author/on_goodreads" target="blank" class="author-image-link">
+                <img src="download.jpg" alt="Top Authors">
+            </a>
+        </div>
+        <div class="author">
+            <a href="https://www.goodreads.com/list/show/14944.Best_Books_by_Female_Authors" target="_blank">Female Authors</a>
+            <a href="https://www.goodreads.com/list/show/14944.Best_Books_by_Female_Authors" target="_blank" class="author-image-link">
+                <img src="Little Women (2019).jpg" alt="Female Authors">
+            </a>
+        </div>
+        <div class="author">
+            <a href="https://www.goodreads.com/shelf/show/award-winning" target="_blank">Award Winning Authors</a>
+            <a href="https://www.goodreads.com/shelf/show/award-winning" target="_blank" class="author-image-link">
+                <img src="download (4).jpg" alt="Award Winning Authors">
+            </a>
+        </div>
+    </section>
+
+    <section class="genres">
+        <h2>Genres</h2>
+        <div class="genre">
+            <a href="https://www.goodreads.com/genres/biography" target="_blank">Biography</a>
+            <a href="https://www.goodreads.com/genres/biography" target="_blank" class="genre-image-link">
+                <img src="Jung A Biography.jpg" alt="Biography">
+            </a>
+        </div>
+        <div class="genre">
+            <a href="https://www.goodreads.com/shelf/show/historical-fiction" target="_blank">Historical Fiction</a>
+            <a href="https://www.goodreads.com/shelf/show/historical-fiction" target="_blank" class="genre-image-link">
+                <img src="The Comfort of Ghosts by Jacqueline Winspear - BookBub.jpg" alt="Historical Fiction">
+            </a>
+        </div>
+        <div class="genre">
+            <a href="https://www.goodreads.com/genres/fantasy" target="_blank">Fantasy Literature</a>
+            <a href="https://www.goodreads.com/genres/fantasy" target="_blank" class="genre-image-link">
+                <img src="Wepik _ Free Graphic Design Editor & Online Templates.jpg" alt="Fantasy Literature">
+            </a>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <h2>Books Showcase</h2>
+        <div class="book" data-book-title="Pride and Prejudice" 
+             data-book-description="A classic novel by Jane Austen about love, marriage, and social status in early 19th-century England." 
+             data-book-author="Jane Austen" 
+             data-book-year="1813">
+            <img src="p yarb22.jpg" alt="Pride and Prejudice">
+            <p>Pride and Prejudice</p>
+        </div>
+        <div class="book" data-book-title="The Adventure of Sherlock Holmes" 
+             data-book-description="A collection of detective stories featuring the legendary Sherlock Holmes by Sir Arthur Conan Doyle." 
+             data-book-author="Arthur Conan Doyle" 
+             data-book-year="1892">
+            <img src="share.jpg" alt="The Adventure of Sherlock Holmes">
+            <p>The Adventure of Sherlock Holmes</p>
+        </div>
+    </section>
+
+    <section class="list">
+        <h2>Lists</h2>
+        <div class="list-item">
+            <a href="https://www.goodreads.com/list/show/6.Best_Books_of_the_20th_Century" target="_blank">Best Books of the 20th Century</a>
+            <a href="https://www.goodreads.com/list/show/6.Best_Books_of_the_20th_Century" target="_blank" class="list-image-link">
+                <img src="download (1).jpg" alt="Best Books of the 20th Century">
+            </a>
+        </div>
+        <div class="list-item">
+            <a href="https://www.goodreads.com/shelf/show/philosophy" target="_blank">Philosophy Reading</a>
+            <a href="https://www.goodreads.com/shelf/show/philosophy" target="_blank" class="list-image-link">
+                <img src="Marcus Aurelius.jpg" alt="Philosophy Reading">
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Your Bookshelf. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,335 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: beige;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(165, 130, 78);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c180d;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: beige;
+    font-weight: 500;
+}
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: beige;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.mobile-menu-icon.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-icon.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: #ebb888;
+    background-image: url(books.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: rgb(226, 209, 173);
+}
+
+.hero p {
+    color: beige;
+    font-size: 1rem;
+}
+
+.hero button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(200, 200, 200, 0.1);
+    color: rgb(226, 209, 173);
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid rgb(226, 209, 173);
+    border-radius: 15px;
+    box-shadow: 8px 10px 8px rgba(141, 98, 98, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+.authors, .genres, .showcase, .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.authors .author, .genres .genre, .list .list-item {
+    background-color: beige;
+    border: 2px solid rgb(165, 130, 78);
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 3px 4px rgba(165, 130, 78, 0.5);
+    flex: 1 1 calc(25% - 20px);
+    max-width: 250px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.authors .author:hover, 
+.genres .genre:hover, 
+.list .list-item:hover {
+    transform: scale(1.05);
+}
+
+.authors .author a, 
+.genres .genre a, 
+.list .list-item a {
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.authors .author-image-link img,  
+.list .list-image-link img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.authors .author-image-link img:hover, 
+.genres .genre-image-link img:hover, 
+.list .list-image-link img:hover {
+    transform: scale(1.1);
+}
+.genres .genre-image-link img{
+    width: 250px;
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.showcase .book {
+    flex: 1 1 calc(25% - 20px); 
+    max-width: 200px;
+    text-align: center;
+    padding: 10px;
+    background-color: beige;
+    border: 2px solid rgb(165, 130, 78);
+    border-radius: 10px;
+    box-shadow: 3px 4px rgba(165, 130, 78, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.showcase .book:hover {
+    transform: scale(1.05);
+}
+
+.showcase img {
+    width: 100px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(165, 130, 78);
+    color: white;
+}
+
+/* Book Details Popup Styling */
+.book-details img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swal2-popup .book-details p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Discover Accordion Styles */
+.hero button#discover-button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero button#discover-button.active {
+    background-color: rgba(226, 209, 173, 0.2);
+}
+
+.discover-accordion {
+    display: none;
+    width: 100%;
+    background-color: rgba(245, 245, 220, 0.1);
+    backdrop-filter: blur(10px);
+    color: beige;
+    margin-top: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s ease;
+    z-index: 5;
+    border-radius: 15px;
+    border: 2px solid rgb(226, 209, 173);
+}
+
+.discover-accordion.active {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.discover-accordion .accordion-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.discover-accordion .accordion-content h3 {
+    color: beige;
+    margin-bottom: 15px;
+}
+
+.discover-accordion .accordion-content ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.discover-accordion .accordion-content li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(165, 130, 78);
+        flex-direction: column;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header nav a {
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+    }
+
+    .showcase {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .showcase .book {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .authors .author, 
+    .genres .genre, 
+    .list .list-item {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .discover-accordion {
+        padding: 10px;
+    }
+
+    .discover-accordion .accordion-content {
+        max-width: 100%;
+    }
+}
